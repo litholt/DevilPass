@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".HomeFrag">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontalScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:scrollbars="none"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+                    <!-- android:scrollbars="none" -->
+
+                    <android.support.design.chip.ChipGroup
+                        android:id="@+id/choice_chip_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginBottom="4dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:singleSelection="true"
+                        tools:ignore="MissingConstraints">
+
+                        <android.support.design.chip.Chip
+                            android:id="@+id/choice_chip"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="8dp"
+                            android:textColor="@android:color/white"
+                            app:chipBackgroundColor="@android:color/holo_purple"
+                            android:text="Concert" />
+
+                        <android.support.design.chip.Chip
+                            android:id="@+id/choice_chip2"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            app:chipBackgroundColor="@color/colorAccent"
+                            android:textColor="@android:color/white"
+                            android:layout_height="35dp"
+                            android:text="Spectacle" />
+
+                        <android.support.design.chip.Chip
+                            android:id="@+id/choice_chip3"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            app:chipBackgroundColor="@android:color/holo_green_light"
+                            android:layout_height="35dp"
+                            android:textColor="@android:color/white"
+                            android:text=" Loisir " />
+
+                        <android.support.design.chip.Chip
+                            android:id="@+id/choice_chip5"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            app:chipBackgroundColor="@android:color/holo_orange_dark"
+                            android:textColor="@android:color/white"
+                            android:layout_height="35dp"
+                            android:text="Cinema" />
+
+                        <android.support.design.chip.Chip
+                            android:id="@+id/choice_chip4"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:textColor="@android:color/white"
+                            app:chipBackgroundColor="@android:color/holo_blue_dark"
+                            android:text=" Sport " />
+
+                        <android.support.design.chip.Chip
+                            android:id="@+id/choice_chip6"
+                            style="@style/Widget.MaterialComponents.Chip.Choice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="35dp"
+                            android:layout_marginEnd="8dp"
+                            android:textColor="@android:color/white"
+                            app:chipBackgroundColor="@android:color/holo_red_light"
+                            android:text="festival" />
+
+                    </android.support.design.chip.ChipGroup>
+
+                </HorizontalScrollView>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recycler_event"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"/>
+
+            </LinearLayout>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
